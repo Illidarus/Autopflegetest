@@ -61,6 +61,23 @@ nav {
     align-items: center;
 }
 
+.nav-extra {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.5rem;
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
@@ -88,12 +105,13 @@ nav {
 
 /* --- Hero Section --- */
 .hero {
-    height: 65vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .hero-bg {
@@ -132,9 +150,9 @@ nav {
     display: inline-block;
     padding: 1rem 2.5rem;
     background: var(--primary);
-    color: #fff;
+    color: var(--bg-dark);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 4px;
     transition: var(--transition);
     border: none;
@@ -170,8 +188,9 @@ nav {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
 }
 
 .service-card {
@@ -329,15 +348,86 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--bg-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        z-index: 1000;
+        border-left: 1px solid var(--glass-border);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .nav-cta {
         display: none;
+        /* Hide button on mobile in header, maybe put in menu */
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    .hero-bg {
+        background: linear-gradient(180deg, var(--bg-dark) 20%, transparent 60%, var(--bg-dark) 100%),
+            url('Bilder/hero_sec_main.jpg') center/cover no-repeat;
     }
 
     .hero h1 {
         font-size: 2.5rem;
     }
 
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
     .contact-flex {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info div[style*="display: flex"] {
+        justify-content: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 500px;
+        padding: 2rem 1.5rem;
     }
 }

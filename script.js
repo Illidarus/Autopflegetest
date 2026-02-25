@@ -16,6 +16,32 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
 
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const menuIcon = menuToggle.querySelector('i');
+
+    menuToggle.onclick = () => {
+        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        
+        if (isOpen) {
+            menuIcon.setAttribute('data-lucide', 'x');
+        } else {
+            menuIcon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons(); // Re-render icons
+    };
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.onclick = () => {
+            navLinks.classList.remove('active');
+            menuIcon.setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+        };
+    });
+
     // Impressum Modal
     const modal = document.getElementById('impressum-modal');
     const openBtn = document.getElementById('open-impressum');
