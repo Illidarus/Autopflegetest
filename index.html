@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Autopflege | Professionelle Fahrzeugaufbereitung</title>
+    <meta name="description"
+        content="Premium Autopflege und Detailing für Ihr Fahrzeug. Glanz, Schutz und Werterhalt auf höchstem Niveau.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">ELITE DETAILE</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Leistungen</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+                <a href="#contact" class="btn" style="padding: 0.7rem 1.5rem; font-size: 0.8rem;">Termin buchen</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content" data-reveal>
+                <h1>PRÄZISION BIS INS DETAIL.</h1>
+                <p>Wir verleihen Ihrem Fahrzeug den Glanz, den es verdient. Professionelle Aufbereitung mit Leidenschaft
+                    und modernster Technik.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn">Unsere Leistungen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2>Unsere Leistungen</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-reveal>
+                    <div class="service-image" style="background-image: url('Bilder/Excellent_politure1.jpg')">
+                    </div>
+                    <div class="service-content">
+                        <h3>Exzellenz-Politur</h3>
+                        <p>Entfernung von Kratzern und Hologrammen für einen spiegelglatten Showroom-Glanz.</p>
+                    </div>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-image" style="background-image: url('Bilder/Keramikversiegelung.jpg')">
+                    </div>
+                    <div class="service-content">
+                        <h3>Keramik-Versiegelung</h3>
+                        <p>Langzeitschutz vor Umwelteinflüssen und extremer Abperleffekt für Ihren Lack.</p>
+                    </div>
+                </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-image" style="background-image: url('Bilder/innenreinigung.jpg')">
+                    </div>
+                    <div class="service-content">
+                        <h3>Innenraum-Detailing</h3>
+                        <p>Tiefenreinigung und Pflege von Leder, Textilien und Armaturen für Neuwagen-Feeling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-flex">
+                <div class="contact-info" data-reveal>
+                    <h2>Kontaktieren Sie uns</h2>
+                    <p style="margin: 1.5rem 0; color: var(--text-muted);">Haben Sie Fragen oder möchten Sie einen
+                        Termin vereinbaren? Wir freuen uns auf Ihre Nachricht.</p>
+
+                    <div style="margin-top: 3rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i data-lucide="map-pin" style="color: var(--primary);"></i>
+                            <span>Werkstraße 12, 12345 Autostadt</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i data-lucide="phone" style="color: var(--primary);"></i>
+                            <span>+49 (0) 123 456789</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i data-lucide="mail" style="color: var(--primary);"></i>
+                            <span>info@elite-detailing.de</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-reveal>
+                    <form id="landing-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" id="email" name="email" required placeholder="Ihre E-Mail Adresse">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Wie können wir helfen?"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ELITE DETAILING. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                <a href="javascript:void(0)" id="open-impressum">Impressum</a>
+                <a href="javascript:void(0)">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Impressum Modal -->
+    <div id="impressum-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Impressum</h2>
+            <div style="margin-top: 2rem; color: var(--text-muted);">
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <p>Elite Detailing GmbH<br>
+                    Werkstraße 12<br>
+                    12345 Autostadt</p>
+
+                <h3 style="margin-top: 1.5rem;">Vertreten durch:</h3>
+                <p>Max Mustermann</p>
+
+                <h3 style="margin-top: 1.5rem;">Kontakt:</h3>
+                <p>Telefon: +49 (0) 123 456789<br>
+                    E-Mail: info@elite-detailing.de</p>
+
+                <h3 style="margin-top: 1.5rem;">Umsatzsteuer-ID:</h3>
+                <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
+                    DE 123 456 789</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
